@@ -31,7 +31,7 @@ import { useEffect, useState } from "react";
 //       <Header />
 //       <h1>HELLO</h1>
 //       <h1>react</h1>
-       
+
 //     </div>
 //   )
 // }
@@ -51,37 +51,37 @@ import { useEffect, useState } from "react";
 // }
 // export default App;
 // ____________________________________________________________________________________________________________
-    //  components: 
+//  components: 
 
-  // building block of react which are independent , reusable piece of ui, they are block each does one job
-  
-  // function App(){
-  //   return(
-  //     <div>
-  //       <h1>First Component</h1>
-  //       <Fruits></Fruits>
-  //       <Colour />
-  //     </div>
-  //   )
-  // }
-  // function Fruits(){
-  //   return(
-  //     <div>
-  //     <h1>Apple</h1>
-  //     </div>
-  //   )
-  // }
-  // function Colour(){
-  //   return(
-  //     <div>
-  //     <h1>Red</h1>
-  //     </div>
-  //   )
-  // }
-  // export default App;
+// building block of react which are independent , reusable piece of ui, they are block each does one job
+
+// function App(){
+//   return(
+//     <div>
+//       <h1>First Component</h1>
+//       <Fruits></Fruits>
+//       <Colour />
+//     </div>
+//   )
+// }
+// function Fruits(){
+//   return(
+//     <div>
+//     <h1>Apple</h1>
+//     </div>
+//   )
+// }
+// function Colour(){
+//   return(
+//     <div>
+//     <h1>Red</h1>
+//     </div>
+//   )
+// }
+// export default App;
 
 
-  // interview question: difference between component and function: jb bhi hum koi function bnate h to expectation hoti h k usme kuch na kuch javascript ka code hi hoga jsx or react me whereas a component is a special type of function that returen a jsx(ui) instead of reguilar data
+// interview question: difference between component and function: jb bhi hum koi function bnate h to expectation hoti h k usme kuch na kuch javascript ka code hi hoga jsx or react me whereas a component is a special type of function that returen a jsx(ui) instead of reguilar data
 // import and export components:jb hum ek component bna k dusri file me bhejte h to use export bolte h or dusri file me use krte h to use import bolte h
 
 // import {Login,Profile, UserKey} from './UserComponent'
@@ -94,7 +94,7 @@ import { useEffect, useState } from "react";
 //       <Profile />
 //       <h1>{UserKey}</h1>
 //     </div>
-    
+
 //   )
 // }
 
@@ -228,7 +228,7 @@ import { useEffect, useState } from "react";
 //         display?<h1>jack</h1>:<h1>no user name</h1>
 //       }
 //       <button onClick={()=>setDisplay(!display)}>Toggle</button>
-      
+
 //     </div>
 //   )
 // }
@@ -282,7 +282,7 @@ import { useEffect, useState } from "react";
 //           <h2 style={{color:"red"}}>hii, you can log in</h2>
 //           </Wrapper>
 //     </div>
-    
+
 //   )
 // }
 // export default App;
@@ -418,7 +418,7 @@ import { useEffect, useState } from "react";
 //         }
 //       </tbody>
 //       </table>
-    
+
 //     <br />
 //     <table border={1}>
 //       <thead>
@@ -494,8 +494,8 @@ import { useEffect, useState } from "react";
 //     <div>
 //       <h1>Clock Component Import and Export</h1>
 //       <select onChange={(event)=>setColor(event.target.value)}>
-        
-        
+
+
 //         <option value={"yellow"} >yellow</option>
 //         <option value={"orange"} >orange</option>
 //         <option value={"blue"} >blue</option>
@@ -601,9 +601,9 @@ import { useEffect, useState } from "react";
 //                    </ul>
 //                   ))
 
-                  
 
-                  
+
+
 //                 }
 //               </li>
 //             </ul>
@@ -612,7 +612,7 @@ import { useEffect, useState } from "react";
 //       }
 //     </div>
 //   )
-  
+
 // }
 // export default App;
 // _________________________________________________________________________________________________________________
@@ -631,7 +631,7 @@ import { useEffect, useState } from "react";
 
 //   function callOnce(){
 //     console.log("callOnce function is called");
-    
+
 //   }
 
 //   return(
@@ -669,18 +669,18 @@ import { useEffect, useState } from "react";
 
 //  function App(){
 //   return(
-  //  <div>
-  //    <div>
-  //     <h1 style={{color:'red', backgroundColor:'pink'}}> inline style in react</h1>
-  //     <div style={{border:'1px solid black', width:'200px',boxShadow:'1px 2px 3px grey'}}>
-  //      <img style={{width:'200px', height:'200px',backgroundColor:'yellow'}} src="C:\Users\Subiya Zeeshan\Downloads\zon book4.jpg" alt="" />
-  //       <div >
-  //         <h4>anil</h4>
-  //         <p>software developer</p>
-  //       </div>
-  //     </div>
-  //   </div>
-  //  </div>
+//  <div>
+//    <div>
+//     <h1 style={{color:'red', backgroundColor:'pink'}}> inline style in react</h1>
+//     <div style={{border:'1px solid black', width:'200px',boxShadow:'1px 2px 3px grey'}}>
+//      <img style={{width:'200px', height:'200px',backgroundColor:'yellow'}} src="C:\Users\Subiya Zeeshan\Downloads\zon book4.jpg" alt="" />
+//       <div >
+//         <h4>anil</h4>
+//         <p>software developer</p>
+//       </div>
+//     </div>
+//   </div>
+//  </div>
 //   )
 //  }
 
@@ -807,7 +807,7 @@ import { useEffect, useState } from "react";
 //   console.log(inputRef);
 //   inputRef.current.focus();
 //   inputRef.current.placeholder="enter password"
-  
+
 // }
 // const toggleHandler=()=>{
 //   if(inputRef.current.style.display!="none"){
@@ -820,7 +820,7 @@ import { useEffect, useState } from "react";
 //   return(
 //     <div>
 //       <h1>useRef</h1>
-      
+
 //       <input ref={inputRef} type="text" placeholder="enter user name" />
 //       <button onClick={inputHandler}>input field</button>
 //       <button onClick={toggleHandler}>toggle</button>
@@ -831,58 +831,104 @@ import { useEffect, useState } from "react";
 // _______________________________________________________________________________________________________________
 
 // UNCONTROLLED COMPONENT:directly dom object se input field ki value control krte h
-import { useRef } from "react";
-function App(){
+// import { useRef } from "react";
+// function App(){
 
-const userRef=useRef();
-const passwordRef=useRef();
-
-
-  const handleForm=(event)=>{
-    event.preventDefault();
-  const user= document.querySelector("#user").value;
-  console.log(user);
-  
-  const password= document.querySelector("#password").value;
-  console.log(password);
-  
-  }
-const handleFormRef=(event)=>{
-    event.preventDefault();
-const user= userRef.current.value
-console.log(user);
-
-const password= passwordRef.current.value
-    console.log(password);
-    
-
-}
-  return(
-    <>
-    <h1>uncontrolled component</h1>
-    <form action="" method="post" onSubmit={handleForm}>
-      <input type="text" ref={userRef} id="user" placeholder="enter name" />
-      <br />
-      <br />
-      <input type="password" ref={passwordRef} id="password" placeholder="enter password" />
-      <br />
-      <br />
-      <button>Submit</button>
-    </form>
-    <hr />
+// const userRef=useRef();
+// const passwordRef=useRef();
 
 
-    <h1>uncontrolled component with useRef</h1>
-    <form action="" method="post" onSubmit={handleFormRef}>
-      <input type="text" id="userRef" placeholder="enter name" />
-      <br />
-      <br />
-      <input type="password" id="passwordRef" placeholder="enter password" />
-      <br />
-      <br />
-      <button>Submit with ref</button>
-    </form>
-    </>
-  )
-}
-export default App;
+//   const handleForm=(event)=>{
+//     event.preventDefault();
+//   const user= document.querySelector("#user").value;
+//   console.log(user);
+
+//   const password= document.querySelector("#password").value;
+//   console.log(password);
+
+//   }
+// const handleFormRef=(event)=>{
+//     event.preventDefault();
+// const user= userRef.current.value
+// console.log(user);
+
+// const password= passwordRef.current.value
+//     console.log(password);
+
+
+// }
+//   return(
+//     <>
+//     <h1>uncontrolled component</h1>
+//     <form action="" method="post" onSubmit={handleForm}>
+//       <input type="text" ref={userRef} id="user" placeholder="enter name" />
+//       <br />
+//       <br />
+//       <input type="password" ref={passwordRef} id="password" placeholder="enter password" />
+//       <br />
+//       <br />
+//       <button>Submit</button>
+//     </form>
+//     <hr />
+
+
+//     <h1>uncontrolled component with useRef</h1>
+//     <form action="" method="post" onSubmit={handleFormRef}>
+//       <input type="text" id="userRef" placeholder="enter name" />
+//       <br />
+//       <br />
+//       <input type="password" id="passwordRef" placeholder="enter password" />
+//       <br />
+//       <br />
+//       <button>Submit with ref</button>
+//     </form>
+//     </>
+//   )
+// }
+// export default App;
+// ___________________________________________________________________________________________________________
+
+// PASS function in component as prop:
+
+// import Users from "./Users";
+// function App() {
+//   const displayName = (name) => {
+//     alert(name)
+//   }
+//   return (
+//     <div>
+//       <h1>Call parent componenet from child </h1>
+//       <Users displayName={displayName} name="sam" />
+//       <Users displayName={displayName} name="ravi" />
+//       <Users displayName={displayName} name="abhishek" />
+
+//     </div>
+//   )
+// }
+// export default App;
+// _________________________________________________________________________________________________________________
+
+// FORWARDRef in REACT: bhot baar refrence jo hota h vo alg component me pda hota h pr input field kisi orcomponent me hota to jb ek component se dusre component me refrence bhejna hota h tb forwardRef use hota h parent se child component me refrence dete h.
+
+// import { useRef } from "react";
+// import UserInput from "./userInput";
+// function App(){
+//     const inputRef=useRef(null)
+//     const updateInput=()=>{
+//        inputRef.current.value=1000
+//          inputRef.current.focus();
+//          inputRef.current.style.color='red'
+//     }
+//     return(
+//         <div>
+//             <h1>FORWARD REF</h1>
+//           <UserInput ref={inputRef}/>
+//             <button onClick={updateInput}>update input field</button>
+//         </div>
+//     )
+// }
+// export default App;
+
+// _______________________________________________________________________________________________________________
+
+// useFornStatus  HOOK IN REACT JS:only available in the latest version of react
