@@ -6,7 +6,9 @@
 // export default App;
 //  we can not use Appe in small letter as app because all thee tags of html start with small  so all the component should strat with capitl letter so react can understand.
 
-import { useEffect, useState } from "react";
+import { startTransition, useActionState, useEffect, useState } from "react";
+import AddUser from "./AddUser";
+import DisplayUser from "./DisplayUser";
 
 // import { useState } from "react";
 
@@ -931,4 +933,246 @@ import { useEffect, useState } from "react";
 
 // _______________________________________________________________________________________________________________
 
-// useFornStatus  HOOK IN REACT JS:only available in the latest version of react
+// useFormStatus  HOOK IN REACT JS:only available in the latest version of react
+
+// import { useFormStatus } from "react-dom";
+// function App() {
+//     const handleSubmit=async()=>{
+//        await new Promise(res=>setTimeout(res,2000));
+//         console.log("submit");
+        
+//     }
+//     function CustomerForm(){
+//         const {pending} = useFormStatus();
+
+//         return(
+//             <div>
+//                 <input type="text" placeholder="enter your name"/>
+//             <br />
+//             <br />
+//             <input type="text" placeholder="enter password" />
+//             <br />
+//             <br />
+//             <button disabled={pending}>{pending?"submitting...":"submit"}</button>
+//             </div>
+//         )
+//     }
+//     return (
+//         <div>
+//             <h1>useFormStatus HOOK IN REACT JS</h1>
+//             <form action={handleSubmit}>
+//             <CustomerForm />
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default App;
+// _______________________________________________________________________________________________________________
+
+// useTransition HOOK IN REACT JS: it is used to handle the state update that can be interrupted.it helps to keep the app responsive during large state updates.
+
+//  import { useTransition} from "react";
+//     function App() {
+       
+// const [input,startTransition] =useTransition() ; 
+//         const handleButton=()=>{
+//          startTransition(async()=>{
+//             await new Promise(res=>setTimeout(res,2000))
+//          })
+
+         
+
+//         }
+//        return (
+//         <div>
+//             <h1>useTransition HOOK IN REACT JS</h1>
+//             <button disabled={input} onClick={handleButton}>Click</button>
+            
+//             <h2>{input}</h2>
+//         </div>
+//          )
+//     }
+//     export default App;
+
+// ________________________________________________________________________________________________________________
+
+// pure function and component in react: pure function vo hote h jo input k base prr tumke output dete h unka o/p kbhi change nhi hoga agr aapka i/p same rhega.
+// pure component ese component hote h jo apki bhr vali cheez ko impact nhi krte. 
+// ___________________________________________________________________________________________________________________
+
+// derived state in react: jb hum ek variabe k and state ki koi calculation rakh lete h to usko bolte h derived state
+
+// function App(){
+//     const [users,setUsers]= useState([]);
+//      const [user,setUser]= useState('');
+//     const handleAddUsers=()=>{
+//         setUsers([...users,user])
+//     }
+//     const total=users.length;
+//     const last=users[users.length-1];
+//     const unique=[...new Set(users)].length;
+//     return(
+//         <div>
+//             <h1>derived state</h1>
+//             <br />
+//             <h2>Total Users: {total}</h2>
+//             <h2>Last User: {last}</h2>
+//             <h1>Unique User: {unique}</h1>
+//             <input type="text" onChange={(event)=>setUser(event.target.value)} placeholder="add new user"/>
+//             <button onClick={handleAddUsers}>add user</button>
+//             {
+//                 users.map((item,index)=>(
+//                     <h3 key={index}>{item}</h3>
+//                 ))
+//             }
+//         </div>
+//     )
+// }
+// export default App;
+// _____________________________________________________________________________________________________________
+
+// LIFTING STATE UP IN REACT JS:jb state ki help se ek component se doosre me data transfer krna chate ho to tb lifting state up ka use krte h.
+
+
+// import AddUser from "./AddUser";
+// import DisplayUser from "./DisplayUser";
+// function App(){
+//      const[user,setUser]=useState('')
+//     return(
+//         <div>
+//             <AddUser setUser={setUser}/>
+//             <DisplayUser user={user}/>
+//         </div>
+//     )
+// }
+// export default App;
+// _____________________________________________________________________________________________________________
+
+// UPDATING OBJECTS IN STATE: 
+
+// function App(){
+//     const [data,setData]=useState({
+//         name:'anil',
+//        city:"delhi",
+//        country:'India'
+//     })
+//     const handleName=(val)=>{
+//       data.name=val;
+//         setData({...data})
+//     }
+//     const handleCity=(val)=>{
+//       data.city=val;
+//         setData({...data})
+//     }
+//     const handleCountry=(val)=>{
+//       data.country=val;
+//         setData({...data})
+//     }
+//     return(
+//         <div>
+//             <h1>updating objects</h1>
+            
+//             <input type="text" placeholder="update name" onChange={(event)=>handleName(event.target.value)} />
+//             <input type="text" placeholder="update city" onChange={(event)=>handleCity(event.target.value)} />
+//             <input type="text" placeholder="update country" onChange={(event)=>handleCountry(event.target.value)} />
+//             <h2>Name: {data.name}</h2>
+//             <h2>city: {data.city}</h2>
+//             <h2>country: {data.country}</h2>
+//         </div>
+
+//     )
+// }
+// export default App;
+//    ____________________________________________________________________________________________________________
+
+// UPDATING ARRAY IN STATE:
+// function App(){
+//     const [data,setData]=useState(['sam','peter','anil']);
+
+//     const [dataDetails,setDataDetails]=useState([
+//         {name:'anil',age:'23'},
+//          {name:'sam',age:'24'},
+//           {name:'peter',age:'2'}
+//     ])
+
+//     const handleUser=(name)=>{
+//         data[data.length-1]=name;
+//         setData([...data])
+//     }
+
+//     const handleAge=(age)=>{
+//         dataDetails[dataDetails.length-1].age=age;
+//         dataDetails([...data])
+//     }
+//     return(
+//         <div>
+//             <h1>Updating Array</h1>
+//             <input type="text" placeholder="enter last user" onChange={(e)=>handleAge(e.target.value)}/>
+//            {
+//             data.map((item,index)=>(
+//                 <h3 kei={index}>{item}</h3>
+//             ))
+//            }
+
+
+//            <input type="text" placeholder="enter last user age" onChange={(e)=>handleAge(e.target.value)}/>
+//            {
+//             dataDetails.map((item,index)=>(
+//                 <h3 key={index}>{item.name},{item.age}</h3>
+//             ))
+//            }
+            
+//         </div>
+//     )
+// }
+// export default App;
+// _______________________________________________________________________________________________________________
+
+// useActionState HOOK: used to handle form in react js. it updates state based on the result of a form action.
+//  import { useActionState } from "react";
+// function App(){
+//     const handleSubmit=async(previousData,formData)=>{
+//     let name= formData.get('name');
+//     let password= formData.get('password')
+//     await new Promise(res=>setTimeout(res,2000));
+//     if(name && password){
+//         return{message:'data submited',name,password}
+//     }
+//     else{
+//         return{
+//             error:'failed to submit.enter proper data'
+//         }
+//     }
+    
+//     }
+//     const [data,action,pending]=useActionState(handleSubmit,undefined)
+//     return(
+//         <div>
+//             <h1>useActionState hooks in react js</h1>
+//             <form action={action}>
+//                 <input type="text" placeholder="enter name" name="name"/>
+//                 <br />
+//                 <br />
+
+//                  <input type="text" placeholder="enter password" name="password"/>
+//                 <br />
+//                 <br />
+//                 <button disabled={pending}>submit data</button>
+//                 <br />
+//             </form>
+//             {
+//                     data?.error && <span style={{color:'red'}}>{data?.error}</span>
+//                 }
+//                 {
+//                     data?.message && <span style={{color:'green'}}>{data?.message}</span>
+//                 }
+//             <h3>name: {data?.name}</h3>
+//              <h3>password: {data?.password}</h3>
+//         </div>
+//     )
+// }
+// export default App;
+// _______________________________________________________________________________________________________________
+
+// useId HOOK:
