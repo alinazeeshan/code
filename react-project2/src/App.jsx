@@ -6,9 +6,11 @@
 // export default App;
 //  we can not use Appe in small letter as app because all thee tags of html start with small  so all the component should strat with capitl letter so react can understand.
 
-import { startTransition, useActionState, useEffect, useState } from "react";
+import { Fragment, startTransition, useActionState, useEffect, useState } from "react";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
+import useToggle from "./useToggle";
+import College from "./College";
 
 // import { useState } from "react";
 
@@ -940,7 +942,7 @@ import DisplayUser from "./DisplayUser";
 //     const handleSubmit=async()=>{
 //        await new Promise(res=>setTimeout(res,2000));
 //         console.log("submit");
-        
+
 //     }
 //     function CustomerForm(){
 //         const {pending} = useFormStatus();
@@ -974,21 +976,21 @@ import DisplayUser from "./DisplayUser";
 
 //  import { useTransition} from "react";
 //     function App() {
-       
+
 // const [input,startTransition] =useTransition() ; 
 //         const handleButton=()=>{
 //          startTransition(async()=>{
 //             await new Promise(res=>setTimeout(res,2000))
 //          })
 
-         
+
 
 //         }
 //        return (
 //         <div>
 //             <h1>useTransition HOOK IN REACT JS</h1>
 //             <button disabled={input} onClick={handleButton}>Click</button>
-            
+
 //             <h2>{input}</h2>
 //         </div>
 //          )
@@ -1072,7 +1074,7 @@ import DisplayUser from "./DisplayUser";
 //     return(
 //         <div>
 //             <h1>updating objects</h1>
-            
+
 //             <input type="text" placeholder="update name" onChange={(event)=>handleName(event.target.value)} />
 //             <input type="text" placeholder="update city" onChange={(event)=>handleCity(event.target.value)} />
 //             <input type="text" placeholder="update country" onChange={(event)=>handleCountry(event.target.value)} />
@@ -1122,7 +1124,7 @@ import DisplayUser from "./DisplayUser";
 //                 <h3 key={index}>{item.name},{item.age}</h3>
 //             ))
 //            }
-            
+
 //         </div>
 //     )
 // }
@@ -1144,7 +1146,7 @@ import DisplayUser from "./DisplayUser";
 //             error:'failed to submit.enter proper data'
 //         }
 //     }
-    
+
 //     }
 //     const [data,action,pending]=useActionState(handleSubmit,undefined)
 //     return(
@@ -1175,4 +1177,160 @@ import DisplayUser from "./DisplayUser";
 // export default App;
 // _______________________________________________________________________________________________________________
 
-// useId HOOK:
+// useId HOOK:used to generate unique ids that can be passed to accessibility attributes.
+// import { useId } from "react";
+// function App(){
+//     const name =useId();
+//      const password =useId();
+//       const mail =useId();
+//        const skills =useId();
+
+//     return(
+//         <div>
+// <h1>{name}</h1>
+// <h1>{password}</h1>
+// <h1>{skills}</h1>
+// <h1>{mail}</h1>
+//         </div>
+//     )
+// }
+// export default App;
+// ________________________________________________________________________________________________________________
+
+// FRAGMENTS IN REACT JS:ye react js ka interna featyure hota h ise parent element ki jgh use krr sakte ho or ye koi bhi html ka element generate nhi krega. instead of using div use fragment
+
+// function App(){
+//     return(
+//         <>
+//             <h1>Fragment in react js</h1>
+//             <h2>Fragment in react js</h2>
+//         </>
+//     )
+// }
+// _______________________________________________________________________________________________________________
+
+// RULES FOR REACT JS HOOKS:
+// 1.start with use prefix
+// 2.jb bhi hook bnaoge to use component k top level pr rakhna hoga
+// 3. do not call hooks inside conditions or loops.
+// 4.do not call hooks after a conditional return statement
+// 5.do not call hooks in event handlers.
+// 6. do not call hooks in class component.
+// 7. do not call hooks inside try/catch/finally block. 
+// ________________________________________________________________________________________________________________
+
+// MAKING CUSTOM HOOKS: 
+
+// function App(){
+//     const [value,toggleValue]=useToggle(true);
+
+//     return(
+//         <>
+
+//         <button onClick={toggleValue}>toggle heading</button>
+//           <button onClick={()=>toggleValue(false)}>hide heading</button>
+//             <button onClick={()=>toggleValue(true)}>show heading</button>
+//             {
+//                value? <h1>custom hook</h1>:null
+//             }
+//         </>
+//     )
+// }
+// export default App;
+// ______________________________________________________________________________________________________________
+
+// CONTEX API: it share data to the component without prop drilling(sharing data from parent to child by sending it to every child it is not a good method as it send data to every child not only the desired one).
+// import contexData from "./contextData";
+
+// import {SubjectContext} from "./contextData";
+
+// function App(){
+//     const [subject,setSubject]=useState('')
+
+//     return(
+
+//         <div  style={{backgroundColor:'red',padding:10}}>
+//             <SubjectContext.Provider value={subject}>
+//                 <select value={subject} onChange={(event)=>setSubject(event.target.value)}>
+//                     <option value=''>Select subject </option>
+//                       <option value='maths'>Maths </option>
+//                         <option value='history'>history </option>
+//                           <option value='english'>engish </option>
+//                            <option value='science'>sciense </option>
+//                             <option value='hindi'>hindi </option>
+//                 </select>
+//                 <h1 >Context api</h1>
+//                 <button onClick={()=>setSubject('')}>clear</button>
+//         <College />
+//         </SubjectContext.Provider>
+//         </div>
+
+//     )
+
+// }
+// export default App;
+// _________________________________________________________________________________________________________
+// 
+// REACT ROUTER 7 SETUP:
+
+
+// BASICpages with react router:
+// brouser router: it enables client side routing using the brousers history api
+// routes:responsible for rendring the aappropriate component based on current url
+// routes: each route component defines a path and a corresponding component to render when that path is matched
+// link: for navigate from one page to another.
+
+// import {BrowserRouter, Route, Routes, Link} from 'react-router'
+// import Home from "./Home";
+// import About from "./About";
+// import Login from "./Login";
+// function App() {
+//     return (
+//         <>
+//             <BrowserRouter>
+//             <Link to="/">Home</Link>
+//              <Link to="/About">About</Link>
+//               <Link to="/Login">Login</Link>
+//                 <Routes>
+                
+//                     <Route path="/" element={<Home /> }/>
+//                      <Route path="/About" element={<About />}/>
+//                      <Route path="/Login" element={<Login /> }/>
+//                 </Routes>
+//            </BrowserRouter>
+//         </>
+//     )
+// }
+// export default App;
+// ________________________________________________________________________________________________________________
+
+// 404 page and redirection: page not found use * in path for this
+
+// import {BrowserRouter, Route, Routes, Link} from 'react-router'
+// import Home from "./Home";
+// import About from "./About";
+// import Login from "./Login";
+// function App() {
+//     return (
+//         <>
+//             <BrowserRouter>
+//             <Link to="/">Home</Link>
+//              <Link to="/About">About</Link>
+//               <Link to="/Login">Login</Link>
+//                 <Routes>
+                
+//                     <Route path="/" element={<Home /> }/>
+//                      <Route path="/About" element={<About />}/>
+//                      <Route path="/Login" element={<Login /> }/>
+//                      <Route path="/*" element={<PageNotFound /> }/>
+//                      <Route path="/*" element={<Navigate to="Login" /> }/>
+
+//                 </Routes>
+//            </BrowserRouter>
+//         </>
+//     )
+// }
+// export default App;
+// _______________________________________________________________________________________________________________
+
+// nested navigation with react router :
