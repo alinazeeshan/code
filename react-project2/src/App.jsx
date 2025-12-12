@@ -1322,8 +1322,8 @@ import College from "./College";
 //                     <Route path="/" element={<Home /> }/>
 //                      <Route path="/About" element={<About />}/>
 //                      <Route path="/Login" element={<Login /> }/>
-//                      <Route path="/*" element={<PageNotFound /> }/>
-//                      <Route path="/*" element={<Navigate to="Login" /> }/>
+//                      <Route path="/+" element={<PageNotFound /> }/>
+//                      <Route path="/+" element={<Navigate to="Login" /> }/>
 
 //                 </Routes>
 //            </BrowserRouter>
@@ -1333,4 +1333,34 @@ import College from "./College";
 // export default App;
 // _______________________________________________________________________________________________________________
 
-// nested navigation with react router :
+// ROUTES PREFIX: kisi bhi routes k phle kuch bhi lge to vo prefix hoga
+// DYNAMIC ROUTES:jb ek page multiple routes k saath open hota h or uss page ka data uss route pr depend krta h to usko bolte h dynamic routing.
+// _________________________________________________________________________________________________
+
+// react router optional segment:
+// import {BrowserRouter, Route, Routes, Link} from 'react-router'
+// import Home from "./Home";
+// import Profile from "./Profile";
+// function App() {
+//     return (
+//         <>
+//             <BrowserRouter>
+//             <Link to="/">Home</Link>
+//              <Link to="/Profile">Profile</Link>
+//               <Link to="/Profile/anil">Profile with name</Link>
+//                 <Routes>
+                
+//                     <Route path="/" element={<Home /> }/>
+//                      <Route path="/Profile/:name?" element={<Profile />}/>
+//                </Routes>
+//           </BrowserRouter>
+//         </>
+//     )
+// }
+// export default App;
+// ________________________________________________________________________________________________________________
+
+// REACT ROUTER NAVLINK AND ACTIVE CLASS:jb hum kisi bhi home page ya about page ya different diffeernt page prr jate h to hume kese pta chalta h k hum kis page prr h .to vha vo thoda highlighted sa dikhta h vo active class ki vjh se dikhta h.
+// ________________________________________________________________________________________________________________
+
+//  Tailwind css in react:
