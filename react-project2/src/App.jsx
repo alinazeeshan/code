@@ -1364,3 +1364,24 @@ import College from "./College";
 // ________________________________________________________________________________________________________________
 
 //  Tailwind css in react:
+// function App(){
+//     return(
+//         <div> <h1 class="text-3xl font-bold underline bg-red-200">
+//     Hello world!
+//   </h1></div>
+//     )
+// }
+// export default App;
+// ____________________________________________________________________________________________________________
+
+//  API: application programing interface. ye do programing lang k beech interface ka kaam krta h.we can make api in one lang and use it everywhere.
+// _____________________________________________________________________________________________________________
+
+//  FETCH DATA FROM API WITH GET METHOD: 
+// 1. GET:
+
+
+
+// 2. PUT/PATCH:
+// 3. POST:
+// 4.DELETE:
